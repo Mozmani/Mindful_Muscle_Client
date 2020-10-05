@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginForm from '../../Components/LoginForm/LoginForm'
+import ApiContext from '../../Contexts/ApiContext'
 
 class LoginPage extends Component {
 
@@ -10,14 +11,16 @@ class LoginPage extends Component {
     },
   }
 
+  static contextType = ApiContext
+
   handleLoginSuccess = () => {
     //console.log('am I working? :D')
-    //const { history } = this.props
-    //history.push('/')
+    const { history } = this.props
+    history.push(`/dashboard/${this.context.currentUser}`)
 
-    const { location, history } = this.props
-    const destination = (location.state || {}).from || '/'
-    history.push(destination)
+    // const { location, history } = this.props
+    // const destination = (location.state || {}).from || '/'
+    // history.push(destination)
   }
 
 

@@ -4,9 +4,6 @@ import TokenService from '../../Services/token-service'
 
 class Header extends Component {
   
-  componentDidUpdate(){
-    console.log('in Header...', this.props)
-  }
 
   handleLogoutClick = () => {
     TokenService.clearAuthToken()

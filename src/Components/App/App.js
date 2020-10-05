@@ -13,7 +13,7 @@ import ApiContext from '../../Contexts/ApiContext';
 class App extends Component {
   state = {
     exercises: [],
-    token:''
+    currentUser: ''
   }
 
   componentDidMount() {
@@ -33,16 +33,21 @@ class App extends Component {
         console.error({ error });
       });
   }
-  componentDidUpdate(){
-    console.log(this.props)
+
+  addCurrentUser = user => {
+    this.setState({
+      currentUser: user
+    })
   }
 
   render() {
     const value = {
       exercises: this.state.exercises,
+      currentUser: this.state.currentUser,
+      addUser: this.addCurrentUser
       //saveAuthtoken:(token) => this.setState({token})
     }
-
+    console.log(this.state)
 
     return (
       <ApiContext.Provider value={value}>

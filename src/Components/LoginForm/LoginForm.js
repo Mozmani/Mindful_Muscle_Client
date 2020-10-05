@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TokenService from '../../Services/token-service'
 import AuthApiService from '../../Services/auth-api-service'
+import ApiContext from '../../Contexts/ApiContext'
 
 
 class LoginForm extends Component {
@@ -8,6 +9,8 @@ class LoginForm extends Component {
     onLoginSuccess: () => {}
   }
   
+  static contextType = ApiContext
+
   state = { error: null }
 
   handleSubmitJwtAuth = ev => {
@@ -18,6 +21,7 @@ class LoginForm extends Component {
       password: password.value
     })
       .then(res => {
+        this.context.addUser(user_name.value)
         user_name.value = ''
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
