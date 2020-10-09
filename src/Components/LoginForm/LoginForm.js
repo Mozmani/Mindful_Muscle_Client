@@ -22,6 +22,7 @@ class LoginForm extends Component {
     })
       .then(res => {
         this.context.addUser(user_name.value)
+        this.findUser(this.context.plans, user_name.value)
         user_name.value = ''
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
@@ -30,7 +31,24 @@ class LoginForm extends Component {
       })
       .catch(res => {
         this.setState({error: res.error})
-      })   
+      })
+      
+      
+  }
+
+  findUser = (plans, userName) => {
+    let track = []
+    for (let i =0; i < plans.length; i++){
+      if (plans[i].user_id === userName && track.length === 0){
+        track.push(plans[i])       
+      }
+      if (track.length >= 1){
+        this.context.dashboard()
+      } 
+      else if (track.length < 1) {
+        this.context.dashboardB()
+      }
+    }
   }
 
   render() { 

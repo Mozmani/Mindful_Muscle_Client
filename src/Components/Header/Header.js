@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import TokenService from '../../Services/token-service'
+import APiContext from '../../Contexts/ApiContext'
+import ApiContext from '../../Contexts/ApiContext';
 
 class Header extends Component {
   
+  static contextType = ApiContext
 
   handleLogoutClick = () => {
+    this.context.login()
     TokenService.clearAuthToken()
+
   }
 
   renderLogoutLink() {
@@ -42,7 +47,7 @@ class Header extends Component {
 
       <nav className='Header'>
         <h1>Mindful Muscle</h1>
-        {this.props.token
+        {this.context.loggedIn
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
 
@@ -52,4 +57,4 @@ class Header extends Component {
   }
 }
  
-export default Header;
+export default withRouter(Header);

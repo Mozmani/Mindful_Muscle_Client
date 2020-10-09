@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000/api',
+  API_ENDPOINT: 'https://thawing-anchorage-18348.herokuapp.com/api',
   TOKEN_KEY: 'mindful-muscle-token-key'
 }

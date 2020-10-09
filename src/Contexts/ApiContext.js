@@ -2,8 +2,10 @@ import React from 'react'
 
 export default React.createContext({
   exercises: [],
-  saveAuthtoken(token) {
+  saveAuthtoken:() => {
   },
+  loggedIn: false,
   currentUser: '',
-  addCurrentUser: () => {}
+  addCurrentUser: () => {},
+  atDashboard: false
 })

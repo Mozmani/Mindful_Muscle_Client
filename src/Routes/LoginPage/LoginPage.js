@@ -16,7 +16,9 @@ class LoginPage extends Component {
   handleLoginSuccess = () => {
     //console.log('am I working? :D')
     const { history } = this.props
+    this.context.login()
     history.push(`/dashboard/${this.context.currentUser}`)
+    
 
     // const { location, history } = this.props
     // const destination = (location.state || {}).from || '/'
