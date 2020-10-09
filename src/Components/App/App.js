@@ -73,6 +73,16 @@ class App extends Component {
       })
   }
 
+  resetState = () => {
+    this.setState({
+      exercises: [],
+      plans: [],
+      currentUser: '',
+      loggedIn: false,
+      atDashboard: false
+    })
+  }
+
   render() {
     const value = {
       exercises: this.state.exercises,
@@ -83,7 +93,8 @@ class App extends Component {
       loggedIn: this.state.loggedIn,
       dashboard: this.handleDash,
       dashboardB: this.handleDashBad,
-      atDashboard: this.state.atDashboard
+      atDashboard: this.state.atDashboard,
+      resetState: this.resetState
 
     }
     const token = TokenService.hasAuthToken()
