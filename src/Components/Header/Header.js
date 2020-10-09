@@ -11,7 +11,7 @@ class Header extends Component {
   handleLogoutClick = () => {
     this.context.login()
     TokenService.clearAuthToken()
-    this.context.resetState()
+    this.context.atDashboardB()
 
   }
 
