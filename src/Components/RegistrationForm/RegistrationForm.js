@@ -66,7 +66,7 @@ class RegistrationForm extends Component {
           Register
         </button>
         <div role='alert'>
-          {error && <p className='red'>{error.message}</p>}
+          {error && <p className='red'>{error}</p>}
         </div>
       </form>
 
