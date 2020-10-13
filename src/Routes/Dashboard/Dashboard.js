@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ApiContext from '../../Contexts/ApiContext'
 import NewUserForm from '../../Components/NewUserForm/NewUserForm'
-import config from '../../config'
 import ReturnUserPage from '../../Components/ReturnUserPage/ReturnUserPage'
 
 class Dashboard extends Component {

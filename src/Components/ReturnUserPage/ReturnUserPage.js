@@ -105,9 +105,9 @@ class ReturnUserPage extends Component {
           set2.push(list[3], list[4], list[6], list[9], list[11])
         }
         else if (num === 2){
-          set1.push(list[1], list[2], list[8], list[11], list[14])
-          set2.push(list[3], list[5], list[9], list[12], list[15])
-          set3.push(list[4], list[6], list[10], list[13], list[14])
+          set1.push(list[1], list[2], list[7], list[10], list[13])
+          set2.push(list[3], list[5], list[8], list[11], list[14])
+          set3.push(list[4], list[6], list[9], list[12], list[13])
         }
         else if (num === 3){
           set1.push(list[1], list[2], list[9], list[12], list[16])
@@ -136,17 +136,17 @@ class ReturnUserPage extends Component {
           set3.push(list[4], list[6], list[9], list[12], list[10])
         }
         else if (num === 3){
-          set1.push(list[1], list[2], list[9], list[12], list[16])
-          set2.push(list[3], list[6], list[10], list[13], list[17])
-          set3.push(list[4], list[7], list[11], list[14], list[12])
-          set4.push(list[5], list[8], list[9], list[15], list[13])
+          set1.push(list[1], list[2], list[8], list[11], list[16])
+          set2.push(list[3], list[6], list[9], list[12], list[17])
+          set3.push(list[4], list[7], list[10], list[13], list[11])
+          set4.push(list[5], list[6], list[8], list[14], list[12])
         }
         else if (num === 4){
-          set1.push(list[1], list[2], list[11], list[14], list[19])
-          set2.push(list[3], list[7], list[12], list[15], list[20])
-          set3.push(list[4], list[8], list[13], list[16], list[14])
-          set4.push(list[5], list[9], list[11], list[17], list[15])
-          set5.push(list[6], list[10], list[12], list[18], list[16])
+          set1.push(list[1], list[2], list[9], list[12], list[18])
+          set2.push(list[3], list[7], list[10], list[13], list[19])
+          set3.push(list[4], list[8], list[11], list[14], list[12])
+          set4.push(list[5], list[7], list[9], list[15], list[13])
+          set5.push(list[6], list[8], list[10], list[16], list[14])
         }
       }
       else if(exerciseGoal.includes('gain_muscle')){

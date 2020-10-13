@@ -66,7 +66,7 @@ class NewUserForm extends Component {
   filterMyExercises = (list, goal, freq) => {
    let newList=[]
    let freqN = Number(freq)
-    console.log('freqN',freqN)
+
    for (let i = 0; i < list.length; i++) {
     
     if (goal === 'gain_muscle'){
@@ -205,19 +205,6 @@ class NewUserForm extends Component {
       
     })
     
-    
-    
-   //console.log(firstList)
-     
-     //console.log('newList',newList)
-    // if (this.state.newExercises.length > 0){
-    //   //let newList = this.filterMyExercises(this.state.exercises, this.state.goals, this.state.freq )
-    //   //console.log('new list here:',this.state.newExercises, newList)
-    //  }
-    // this.pushResultsToTable(newList, freq.value, goals.value)
-    // this.findUser(this.context.plans, this.context.currentUser)
-    // this.context.dashboard()
-    // this.props.onLoginSuccess()
 
   }
   
