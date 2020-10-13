@@ -167,26 +167,30 @@ class NewUserForm extends Component {
 
   pushResultsToTable(list, freq, goal){
 
-    for (let i = 0; i < list.length; i++){
-      Promise.all([
-        fetch(`${config.API_ENDPOINT}/adex`, {
+    //for (let i = 0; i < list.length; i++){
+     return Promise.all(list.map(exercise => 
+
+         fetch(`${config.API_ENDPOINT}/adex`, {
           method: 'POST',
         headers: {
           'content-type': 'application/json'
         },
         body: JSON.stringify({
           user_id:this.props.user.userName,
-          exercise_id: list[i].id,
+          exercise_id: exercise.id,
           frequency: freq,
           goal: goal
         }),
         })
-      ])
-      .then(exercise => {
-        return Promise.all([exercise])
-      })
+
+      ))
+       
       
-    }
+      // .then(exercise => {
+      //   return Promise.all([exercise])
+      // })
+      
+    //}
   }
   
   handleFormSubmit = ev => {
