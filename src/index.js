@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './Components/App/App';
 
+// This is an index file, in case you are unaware, this file contains everything in the application!
 
 ReactDOM.render(
   <BrowserRouter>
@@ -12,8 +13,4 @@ ReactDOM.render(
     
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 

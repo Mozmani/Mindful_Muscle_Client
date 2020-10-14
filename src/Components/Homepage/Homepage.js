@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+// A simple homepage / landingpage component
 class Homepage extends Component {
   state = {  }
   render() { 

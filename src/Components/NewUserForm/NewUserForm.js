@@ -3,6 +3,7 @@ import ApiContext from '../../Contexts/ApiContext'
 import config from '../../config'
 import TokenService from '../../Services/token-service'
 
+// Class component that handles new user's exercise prrefrences
 class NewUserForm extends Component {
   state = {
     exercises:[],
@@ -18,27 +19,7 @@ class NewUserForm extends Component {
 
   static contextType = ApiContext
   
-
-  // findMyExercises = (freq, exercise, goals) => {
-  //   let newList = []
-  //   let oldList = this.context.exercises
-
-  //   for (let i = 0; i < oldList.length; i++){
-      
-  //     if (oldList[i].exercise_priority <= freq && (oldList[i].equipment_value === 1 || oldList[i].equipment_value === Number(exercise)) ){
-        
-        
-  //       for (let [key, value] of Object.entries(oldList[i])) {
-  //           if(`${key}: ${value}` === goals ){
-  //             newList.push(oldList[i])
-  //           }
-  //         }
-
-  //     } 
-  //   }
-  //   return newList
-  // }
-
+   // fetch call to protected filtered exercise list
    findMyExercises = (freq, exercise, goals) => {
     return fetch(`${config.API_ENDPOINT}/filter/${goals}-${exercise}-${freq}`, {
       headers: {
@@ -62,7 +43,8 @@ class NewUserForm extends Component {
    }
 
 
-
+   // A client side filter of filtered exercises to populate a unique list for each condition.
+   // Next Version Plans: Will be able to delete / change this list.
   filterMyExercises = (list, goal, freq) => {
    let newList=[]
    let freqN = Number(freq)
@@ -164,10 +146,9 @@ class NewUserForm extends Component {
    return newList
     
   }
-
+  // POST to exercise table for specific user
   pushResultsToTable(list, freq, goal){
 
-    //for (let i = 0; i < list.length; i++){
      return Promise.all(list.map(exercise => 
 
          fetch(`${config.API_ENDPOINT}/adex`, {
@@ -185,17 +166,18 @@ class NewUserForm extends Component {
 
       ))
        
-      
-      // .then(exercise => {
-      //   return Promise.all([exercise])
-      // })
-      
-    //}
   }
-  
+  /* Handles Form submit:
+  1) Pulls selections choices from user.
+  2) Makes a GET request from a filtered dashboard route.
+  3) Performs a second filter to create a unique manageable list.
+  4) POSTS that list to a new exercise plan table
+  5) Sets Dashboard value to true which brings the New user to their freshly created dashboard
+  that has their exercise plan!
+  */
   handleFormSubmit = ev => {
     ev.preventDefault()
-    const { goals, freq, exercise } = ev.target
+    const { goals, freq} = ev.target
     
   this.findMyExercises(this.state.freq, this.state.exVal, this.state.goals)
     .then(exercises => {
@@ -211,7 +193,7 @@ class NewUserForm extends Component {
     
 
   }
-  
+  // A way to handle tracking user name for routing and progression to dashboard page
   findUser = (plans, userName) => {
     let track = []
     for (let i =0; i < plans.length; i++){
@@ -221,16 +203,18 @@ class NewUserForm extends Component {
       }
     }
   }
-  
+  // onChange function to grab goals value
   findGoal = (val) => {
     this.setState({
       goals: val
     })
   }
+  // onChange function to grab frequency value
   findFreq = (val) => {
     this.setState({
       freq: val
     })
+  // onChange function to grab exercise value value
   }
   findExVal = (val) => {
     this.setState({

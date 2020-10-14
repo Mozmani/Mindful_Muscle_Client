@@ -3,6 +3,7 @@ import config from '../../config'
 import ApiContext from '../../Contexts/ApiContext'
 import TokenService from '../../Services/token-service'
 
+//Class component for rendering User's exercise plan!
 class ReturnUserPage extends Component {
   state = { 
     exercises: [],
@@ -11,7 +12,7 @@ class ReturnUserPage extends Component {
   }
   
   static contextType = ApiContext
-
+  // Fetches the exercises from the exercise table for this specific user
   componentDidMount () {
      return fetch(`${config.API_ENDPOINT}/epex/${this.context.currentUser}`, {
         method: 'GET',
@@ -42,7 +43,7 @@ class ReturnUserPage extends Component {
   }
   
   
-  
+  // Generates the day list based off of the users list!
   generateDayList(){
     let arr =[]
     
@@ -73,7 +74,7 @@ class ReturnUserPage extends Component {
     }
       
   }
-
+  // Maps the list of exercises within each day
   listExercise = (list) => {
     return list.map((exercise, idx) => {
       return <li key={idx}>
@@ -90,7 +91,7 @@ class ReturnUserPage extends Component {
     })
 
   } 
-
+  // creates the set of day lists based off of the users goal and frequency
   generateExerciseList(num, list, goal){
     let exerciseGoal = goal
     let set1= [list[0]]

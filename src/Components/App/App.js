@@ -13,6 +13,8 @@ import RegistrationPage from '../../Routes/RegistrationPage/RegistrationPage'
 import './App.css';
 import ApiContext from '../../Contexts/ApiContext';
 
+
+// Main App class
 class App extends Component {
   state = {
     exercises: [],
@@ -22,7 +24,7 @@ class App extends Component {
     atDashboard: false
     
   }
-
+  // grabs state of exercises / plans
   componentDidMount() {
     this.setState(JSON.parse(window.localStorage.getItem('state')))
     
@@ -50,29 +52,31 @@ class App extends Component {
   componentDidUpdate(){
     window.localStorage.setItem('state', JSON.stringify(this.state))
   }
-
+  // function to add username for routing
   addCurrentUser = user => {
     this.setState({
       currentUser: user
     })
   }
+  // function to handle logged in state to control header rendering
   handleLogin= () => {
     this.setState({
       loggedIn: !this.state.loggedIn
     })
   }
-
+  // function to set state of dashboard to true (helps with user flow)
   handleDash = () => {
     this.setState({
     atDashboard: true
     })
+    // function to set state of dashboard to false (helps with user flow)
   }
   handleDashBad = () => {
     this.setState({
       atDashboard: false
       })
   }
-
+  // A reset state function
   resetState = () => {
     this.setState({
       exercises: [],
@@ -84,6 +88,7 @@ class App extends Component {
   }
 
   render() {
+    // context provider values
     const value = {
       exercises: this.state.exercises,
       plans: this.state.plans,

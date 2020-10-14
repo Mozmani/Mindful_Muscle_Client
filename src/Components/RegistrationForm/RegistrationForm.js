@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import AuthApiService from '../../Services/auth-api-service'
-
+// Class component to handle user registration
 class RegistrationForm extends Component {
   state = { error: null }
 
-
+  // handles user registration on form submit
   handleSubmit = ev => {
     ev.preventDefault()
     const { user_name, password } = ev.target
 
     this.setState({ error: null })
+    // runs Auth service to check if new user and password is valid for a new user
     AuthApiService.postUser({
       user_name: user_name.value,
       password: password.value,
@@ -22,6 +23,7 @@ class RegistrationForm extends Component {
 
       })
       .catch( res => {
+        // if an error arrises, this displays on the page.
         this.setState({ error: res.error })
       })
 

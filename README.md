@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mindful Muscle Client version 1.0
 
-## Available Scripts
+## This is the front end client to the Mindful Muscle application!
 
-In the project directory, you can run:
+In this app you can generate a unique exercise plan by entering in a few fields of data. This application was created to simplify one aspect of the complicated process for building a healthier life.
 
-### `npm start`
+## Demo Accounts
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+While this Application is best experienced by creating a new user and selecting plans yourself. I have provided a few demo accounts below to log in and see example exercise plans.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Username: testUser1 Password: thisISsecure1$ Plan: Gain Strength, 2x a week, no equipment
+2. Username: testUser2 Password: thisISsecure1$ Plan: Gain Muscle Hypertrophy, 3x a week, no equipment
+3. Username: testUser3 Password: thisISsecure1$ Plan: Gain Endurance, 4x a week, Resistence Bands
+4. Username: testUser4 Password: thisISsecure1$ Plan: Burn Fat, 5x a week, Gym Membership
+5. Username: testUser5 Password: thisISsecure1$ Plan: none (first tester can select)
+6. Username: testUser6 Password: thisISsecure1$ Plan: none (first tester can select)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## User stories
+As a visitor:
+1. you can sign up and create a user!
 
-### `npm run build`
+As a user:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. You can select an exercise goal.
+2. You can select how often you want to exercise.
+3. You can select what resources you have (gym membership, resistance band, no equipment)
+4. you can recieve a personalized exercise plan based off of all these fields.
+5. You will recieve general information regarding each and every exercise.
+6. You will recieve specific information and a video for each exercise to ensure proper form.
+7. Every dashboard will provide advice to help the user to reach their goals.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Set up (for local use)
+1. clone this client to a local directory
+2. npm install to ensure all dependencies are installed.
+3. download and run the Mindful Muscle server following its instructions.
+4. npm start command to launch server.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Live Link
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Mindful Muscle](https://m-muscle-client.vercel.app)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## About Me
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [GitHub Profile](https://github.com/Mark-The-Dev)
+* [LinkedIn](https://www.linkedin.com/in/mark-marcello-8896481b1)
 
-## Learn More
+## Special Thanks!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Special thanks to Thinkful's software engineering immersion program for inspiring me to create this application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future version features
 
-### Code Splitting
+Version 2.0 will include:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Ability to remove user's plan
+* Ability to add a new plan from different inputs
+* an extra custom workout plan per user that is selected by them.

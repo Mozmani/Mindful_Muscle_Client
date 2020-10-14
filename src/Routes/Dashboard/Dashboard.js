@@ -3,6 +3,7 @@ import ApiContext from '../../Contexts/ApiContext'
 import NewUserForm from '../../Components/NewUserForm/NewUserForm'
 import ReturnUserPage from '../../Components/ReturnUserPage/ReturnUserPage'
 
+// Class component for Dashboard -- determines new user or returning!
 class Dashboard extends Component {
   state = { 
     plans: [],
@@ -12,7 +13,7 @@ class Dashboard extends Component {
   
   static contextType = ApiContext
   
-  
+    // pushes user to dashboard after field entry
     handleDashSuccess = () => {
   
       const { history } = this.props
@@ -21,7 +22,7 @@ class Dashboard extends Component {
     }
   
   render() { 
-    
+    // conditional render depending on new user status or returning user!
     
     if (this.context.atDashboard === false){
       return (

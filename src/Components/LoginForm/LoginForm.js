@@ -3,7 +3,7 @@ import TokenService from '../../Services/token-service'
 import AuthApiService from '../../Services/auth-api-service'
 import ApiContext from '../../Contexts/ApiContext'
 
-
+//Component that handles logins
 class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {}
@@ -12,7 +12,7 @@ class LoginForm extends Component {
   static contextType = ApiContext
 
   state = { error: null }
-
+  // makes sure logged in user has an auth token
   handleSubmitJwtAuth = ev => {
     ev.preventDefault()
     const { user_name, password } = ev.target
@@ -35,7 +35,8 @@ class LoginForm extends Component {
       
       
   }
-
+  //determines if user is valid and logged in to apply dashboard state if returning user
+  // or returns false if user exercise plans don't exist (routes to exercise conditions in this case)
   findUser = (plans, userName) => {
     let track = []
     for (let i =0; i < plans.length; i++){

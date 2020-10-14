@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ApiContext from '../../Contexts/ApiContext'
-
+// Simple generate all exercises component
+// this will be used in future versions when implementing custom exercise list creation.
 class AllExercises extends Component {
   static contextType = ApiContext;
 

@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import TokenService from '../../Services/token-service'
-import APiContext from '../../Contexts/ApiContext'
 import ApiContext from '../../Contexts/ApiContext';
-
+// Header component, shows view of login/register or logout on render
 class Header extends Component {
   
   static contextType = ApiContext
-
+  // handles logout
   handleLogoutClick = () => {
     this.context.login()
     TokenService.clearAuthToken()
     this.context.dashboardB()    
 
   }
-
+  // displays header html for logging out
   renderLogoutLink() {
     return (
       <div className='Header__logged-in'>
@@ -26,6 +25,7 @@ class Header extends Component {
       </div>
     )
   }
+  //displays html for logging in and registering
   renderLoginLink() {
     return (
       <div className='Header__not-logged-in'>
@@ -43,7 +43,7 @@ class Header extends Component {
 
 
   render() { 
-  
+  // decideds which header is appropriate.
     return ( 
 
       <nav className='Header'>

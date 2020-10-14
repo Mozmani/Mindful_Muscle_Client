@@ -1,6 +1,7 @@
 import config from '../config'
-
+// Auth services for Client
 const AuthApiService = {
+  //function to send post request required for login. 
   postLogin(credentials) {
     
     return fetch(`${config.API_ENDPOINT}/auth/login`, {
@@ -16,6 +17,7 @@ const AuthApiService = {
       : res.json()
       )
   },
+  // function to send post request for user creation.
   postUser(user) {
     return fetch(`${config.API_ENDPOINT}/user`, {
       method: 'POST',
