@@ -1,0 +1,33 @@
+header h1, header h2{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:10px;
+  margin:0;
+  color:whitesmoke;
+}
+
+header{
+  background-color: #4A4E69;
+  margin:0;
+}
+
+div.Header__logged-in, div.Header__not-logged-in{
+  display:flex;
+  justify-content: flex-end;
+  
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border: whitesmoke solid;
+  padding: 5px;
+  border-radius: 16px;
+}
+
+a:hover {
+  background-color: #22223B;
+}

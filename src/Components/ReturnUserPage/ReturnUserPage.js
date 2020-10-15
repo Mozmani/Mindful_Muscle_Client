@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import config from '../../config'
 import ApiContext from '../../Contexts/ApiContext'
 import TokenService from '../../Services/token-service'
+import './ReturnUser.css'
 
 //Class component for rendering User's exercise plan!
 class ReturnUserPage extends Component {
@@ -59,9 +60,11 @@ class ReturnUserPage extends Component {
         let newList = this.listExercise(getEx[i])
         
         arr.push(<ul 
-        key={i}>
-          <h3>{`Day: ${i + 1}`}</h3>
-       
+        key={i}
+        className='days'
+        >
+          <h3 className='days'>{`Day: ${i + 1}`}</h3>
+          
           {newList}
         
         </ul>)
@@ -81,7 +84,7 @@ class ReturnUserPage extends Component {
         <h4>{exercise.exercise_name}</h4>
         <p>{exercise.exercise_description}</p>
         <p>{exercise.instructions}</p>
-        <iframe width="100%" height="100%" 
+        <iframe width="90%" height="250px" 
         src={exercise.link}
         title={exercise.id}
         frameBorder="0" 
@@ -212,7 +215,7 @@ class ReturnUserPage extends Component {
   render() { 
    
     return ( 
-    <>
+    <section className='returnUser'>
     <h2>{`Welcome Back ${this.context.currentUser}`}</h2>
     <p>Below you can find your own custom workout plan!</p>
     <ul>
@@ -227,7 +230,7 @@ class ReturnUserPage extends Component {
    
       {this.generateDayList()}
    
-    </> );
+    </section> );
   }
 }
  

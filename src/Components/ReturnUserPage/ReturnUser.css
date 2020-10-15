@@ -1,0 +1,21 @@
+section.returnUser, h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-content: center;
+}
+
+ul.days{
+  border: 2px solid whitesmoke;
+}
+
+h3.days {
+  border-bottom:2px solid whitesmoke;
+}
+

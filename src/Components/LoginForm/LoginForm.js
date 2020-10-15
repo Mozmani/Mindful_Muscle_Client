@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import TokenService from '../../Services/token-service'
 import AuthApiService from '../../Services/auth-api-service'
 import ApiContext from '../../Contexts/ApiContext'
+import './LoginForm.css'
 
 //Component that handles logins
 class LoginForm extends Component {
   static defaultProps = {
-    onLoginSuccess: () => {}
+    onLoginSuccess: () => { }
   }
-  
+
   static contextType = ApiContext
 
   state = { error: null }
@@ -30,31 +31,31 @@ class LoginForm extends Component {
 
       })
       .catch(res => {
-        this.setState({error: res.error})
+        this.setState({ error: res.error })
       })
-      
-      
+
+
   }
   //determines if user is valid and logged in to apply dashboard state if returning user
   // or returns false if user exercise plans don't exist (routes to exercise conditions in this case)
   findUser = (plans, userName) => {
     let track = []
-    for (let i =0; i < plans.length; i++){
-      if (plans[i].user_id === userName && track.length === 0){
-        track.push(plans[i])       
+    for (let i = 0; i < plans.length; i++) {
+      if (plans[i].user_id === userName && track.length === 0) {
+        track.push(plans[i])
       }
-      if (track.length >= 1){
+      if (track.length >= 1) {
         this.context.dashboard()
-      } 
+      }
       else if (track.length < 1) {
         this.context.dashboardB()
       }
     }
   }
 
-  render() { 
+  render() {
     const { error } = this.state
-    return ( 
+    return (
       <form
         className='LoginForm'
         onSubmit={this.handleSubmitJwtAuth}
@@ -80,18 +81,18 @@ class LoginForm extends Component {
             id='LoginForm__password'>
           </input>
         </div>
-        <button type='submit'>
-          Login
+        <div className='btn'>
+          <button type='submit'>
+            Login
         </button>
-
-
+        </div>
 
         <div role='alert'>
           {error && <p className='red'>{error}</p>}
         </div>
       </form>
-     );
+    );
   }
 }
- 
+
 export default LoginForm;

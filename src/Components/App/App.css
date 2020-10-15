@@ -1,30 +1,27 @@
-header h1, header h2{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  padding:10px;
-  margin:0;
-  color:whitesmoke;
-}
-
-header{
-  background-color: #4A4E69;
-  margin:0;
-}
 
 html{
   background-color: #22223B;
   color: whitesmoke;
+  height: 100%;
 }
 
- h3  {
+
+ /* h3  {
   display: flex;
   justify-content: center;
-}
+} */
 
-p, ul, li {
+ /* ul, li {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10%;
+} */
+
+* {
+  font-family: 'Merriweather', serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
 }

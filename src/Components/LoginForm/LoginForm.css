@@ -1,0 +1,37 @@
+
+section.LoginPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid whitesmoke;
+  border-radius: 16px;
+  margin: 10% 10%
+}
+
+
+div.user_name, div.password{
+  display:flex;
+  flex-direction: column;
+
+}
+
+div.btn{
+  display: flex;
+  justify-content: center;
+  margin: 8% 0%;
+}
+button {
+  color: whitesmoke;
+  background-color: #4A4E69;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border: whitesmoke solid;
+  padding: 8px;
+  border-radius: 16px;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #22223B;
+}

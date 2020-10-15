@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthApiService from '../../Services/auth-api-service'
+import './RegistrationForm.css'
 // Class component to handle user registration
 class RegistrationForm extends Component {
   state = { error: null }
@@ -22,7 +23,7 @@ class RegistrationForm extends Component {
         this.props.onRegistrationSuccess()
 
       })
-      .catch( res => {
+      .catch(res => {
         // if an error arrises, this displays on the page.
         this.setState({ error: res.error })
       })
@@ -64,9 +65,12 @@ class RegistrationForm extends Component {
             id='RegistrationForm__password'>
           </input>
         </div>
-        <button type='submit'>
-          Register
+        <div className='btn'>
+          <button type='submit'>
+            Register
         </button>
+        </div>
+
         <div role='alert'>
           {error && <p className='red'>{error}</p>}
         </div>

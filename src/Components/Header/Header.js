@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import TokenService from '../../Services/token-service'
 import ApiContext from '../../Contexts/ApiContext';
+import './Header.css'
 // Header component, shows view of login/register or logout on render
 class Header extends Component {
   
@@ -31,7 +32,7 @@ class Header extends Component {
       <div className='Header__not-logged-in'>
         <Link
           to='/login'>
-          Log in
+          Sign In
         </Link>
         <Link
           to='/register'>
