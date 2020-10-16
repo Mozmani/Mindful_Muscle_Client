@@ -51,7 +51,24 @@ class App extends Component {
   }
   componentDidUpdate(){
     window.localStorage.setItem('state', JSON.stringify(this.state))
+    
   }
+
+  // grabs new exercise plans 
+  newPlans(){
+    fetch(`${config.API_ENDPOINT}/adex`)
+    .then((res) => {
+      if (!res.ok) {
+        return res.json().then(e => Promise.reject(e));
+      }
+
+      return res.json();
+    })
+    .then((plans) => {
+      this.setState({plans})
+    })
+  }
+
   // function to add username for routing
   addCurrentUser = user => {
     this.setState({
@@ -103,6 +120,10 @@ class App extends Component {
 
     }
     const token = TokenService.hasAuthToken()
+    if (this.state.loggedIn === true){
+      this.newPlans()
+    }
+
     return (
       <ApiContext.Provider value={value}>
         <>
