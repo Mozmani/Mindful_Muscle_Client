@@ -202,6 +202,7 @@ Authorization: Bearer ${token}
   }
 ]
 
+![Mindful Muscle](https://raw.githubusercontent.com/Mark-The-Dev/Mindful_Muscle_Client/master/public/mm-meta.png)
 
 ## Live Link
 
