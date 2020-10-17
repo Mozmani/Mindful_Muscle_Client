@@ -4,6 +4,8 @@
 
 In this app you can generate a unique exercise plan by entering in a few fields of data. This application was created to simplify one aspect of the complicated process for building a healthier life.
 
+![Mindful Muscle](https://raw.githubusercontent.com/Mark-The-Dev/Mindful_Muscle_Client/master/public/mm-meta.png)
+
 ## Demo Accounts
 
 While this Application is best experienced by creating a new user and selecting plans yourself. I have provided a few demo accounts below to log in and see example exercise plans.
@@ -43,7 +45,7 @@ Server: Node.js, express, Knex
 Database: Postgres SQL
 
 ## API overview
-
+```
 /api
 .
 ├── /auth
@@ -68,7 +70,7 @@ Database: Postgres SQL
 │   └── GET /:name
 ├── /filter
 │   └── GET /:filter-:equipVal-:priority
-
+```
 ## API documentation
 * POST api/auth/login
 
@@ -202,7 +204,7 @@ Authorization: Bearer ${token}
   }
 ]
 
-![Mindful Muscle](https://raw.githubusercontent.com/Mark-The-Dev/Mindful_Muscle_Client/master/public/mm-meta.png)
+
 
 ## Live Link
 
