@@ -1,10 +1,10 @@
-import React from 'react'
-// Standard context file 
+import React from "react";
+// Standard context file
 export default React.createContext({
   exercises: [],
-  saveAuthtoken:() => {},
+  saveAuthtoken: () => {},
   loggedIn: false,
-  currentUser: '',
+  currentUser: "",
   addCurrentUser: () => {},
-  atDashboard: false
-})
+  atDashboard: false,
+});
