@@ -223,6 +223,9 @@ class NewUserForm extends Component {
         return this.pushResultsToTable(newList, freq.value, goals.value);
       })
       .then(() => {
+        return this.context.newPlans()
+      })
+      .then(() => {
         this.findUser(this.context.plans, this.context.currentUser);
         this.context.dashboard();
         this.props.onDashSuccess();

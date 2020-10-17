@@ -7,4 +7,6 @@ export default React.createContext({
   currentUser: "",
   addCurrentUser: () => {},
   atDashboard: false,
+  newPlans: () => {}
+
 });

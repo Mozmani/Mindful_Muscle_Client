@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   // grabs new exercise plans
-  newPlans() {
+  newPlans = () => {
     fetch(`${config.API_ENDPOINT}/adex`)
       .then((res) => {
         if (!res.ok) {
@@ -117,11 +117,10 @@ class App extends Component {
       dashboardB: this.handleDashBad,
       atDashboard: this.state.atDashboard,
       resetState: this.resetState,
+      newPlans: this.newPlans
     };
     const token = TokenService.hasAuthToken();
-    if (this.state.loggedIn === true) {
-      this.newPlans();
-    }
+    
 
     return (
       <ApiContext.Provider value={value}>

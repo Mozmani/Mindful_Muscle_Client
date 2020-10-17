@@ -1,22 +1,11 @@
 
-html{
+body{
   background-color: #22223B;
   color: whitesmoke;
   height: 100%;
 }
 
 
- /* h3  {
-  display: flex;
-  justify-content: center;
-} */
-
- /* ul, li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10%;
-} */
 
 * {
   font-family: 'Merriweather', serif;
