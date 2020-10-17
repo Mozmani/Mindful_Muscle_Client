@@ -72,6 +72,7 @@ Database: Postgres SQL
 │   └── GET /:filter-:equipVal-:priority
 ```
 ## API documentation
+```
 * POST api/auth/login
 
 // req.body
@@ -203,7 +204,7 @@ Authorization: Bearer ${token}
     endurance: Boolean === filter
   }
 ]
-
+```
 
 
 ## Live Link
