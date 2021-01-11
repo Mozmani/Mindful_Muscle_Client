@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import RegistrationForm from '../../Components/RegistrationForm/RegistrationForm'
+import ApiContext from "../../Contexts/ApiContext";
+
 
 //Class component for user registration
 export default class RegistrationPage extends Component {
@@ -8,10 +10,13 @@ export default class RegistrationPage extends Component {
       push: () => {},
     },
   }
+  static contextType = ApiContext;
   // if sucessful user is routed to login! handled in form.
   handleRegistrationSuccess = user => {
+    console.log("this ran");
     const { history } = this.props
-    history.push('/login')
+    this.context.login();
+    history.push(`/dashboard/${this.context.currentUser}`)
   }
 
   render() {
