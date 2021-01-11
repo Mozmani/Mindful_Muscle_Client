@@ -17,7 +17,7 @@ class Header extends Component {
     const exerciseAddress = `/dashboard/${this.context.currentUser}`;
     return (
       <div className="Header__logged-in">
-        <Link to={exerciseAddress}>My Exercises</Link>
+        <Link to={exerciseAddress}>Exercises</Link>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>

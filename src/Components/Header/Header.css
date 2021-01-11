@@ -10,6 +10,13 @@ header h1, header h2{
 header{
   background-color: #4A4E69;
   margin:0;
+  padding: 10px;
+}
+
+nav.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 div.Header__logged-in, div.Header__not-logged-in{
@@ -18,14 +25,19 @@ div.Header__logged-in, div.Header__not-logged-in{
   
 }
 
+
 div.Header__logged-in a, div.Header__not-logged-in a {
   color: whitesmoke;
   text-decoration: none;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  margin-right: 5px;
   border: whitesmoke solid;
   padding: 5px;
   border-radius: 16px;
+  font-size: 10px;
+}
+
+div.Header__logged-in a:first-child{
+  margin-right: 0 10px;
 }
 
 div.Header__not-logged-in a:hover {
@@ -37,16 +49,56 @@ div.Header__logged-in a:hover {
 }
 
 div.home {
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
+  
+  margin-left: 2%;
 }
 a.header-a{
   color: whitesmoke;
   text-decoration: none;
+  font-size: 16px;
 
 }
 
 a.header-a:hover{
   color:#22223B;
+}
+
+@media only screen and (min-width: 325px){
+
+  div.Header__logged-in a, div.Header__not-logged-in a {
+    font-size: 12px;
+  }
+
+  a.header-a{
+    font-size: 18px;
+  }
+
+}
+
+@media only screen and (min-width: 425px){
+
+  div.Header__logged-in a, div.Header__not-logged-in a {
+    font-size: 16px;
+  }
+
+  a.header-a{
+    font-size: 22px;
+  }
+
+}
+
+@media only screen and (min-width: 601px){
+
+  div.Header__logged-in a, div.Header__not-logged-in a {
+    font-size: 20px;
+  }
+
+  a.header-a{
+    font-size: 28px;
+  }
+
+  div.Header__logged-in a:first-child{
+    margin-right: 5%;
+  }
+
 }
