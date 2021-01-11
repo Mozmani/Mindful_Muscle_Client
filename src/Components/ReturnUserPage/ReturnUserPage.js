@@ -74,8 +74,7 @@ class ReturnUserPage extends Component {
           <p>{exercise.exercise_description}</p>
           <p>{exercise.instructions}</p>
           <iframe
-            width="90%"
-            height="250px"
+            width="100%"
             src={exercise.link}
             title={exercise.id}
             frameBorder="0"
@@ -195,9 +194,7 @@ class ReturnUserPage extends Component {
           </li>
           <li>
             WARNING: Exercises performed without proper form can put you at
-            serious risk. <br></br>
-            <br></br>
-            MAKE SURE TO READ THE INSTRUCTIONS OR WATCH THE VIDEO FOR EACH
+            serious risk. MAKE SURE TO READ THE INSTRUCTIONS OR WATCH THE VIDEO FOR EACH
             EXERCISE!
           </li>
         </ul>

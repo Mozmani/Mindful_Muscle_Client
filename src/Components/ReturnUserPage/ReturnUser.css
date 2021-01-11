@@ -1,21 +1,64 @@
-section.returnUser, h4 {
+
+
+
+section.returnUser {
+  padding: 0;
   display: flex;
   flex-direction: column;
+  list-style: none;
   align-items: center;
+  margin: 0 10%;
 }
 
 li {
   display: flex;
   flex-direction: column;
   list-style: none;
-  align-content: center;
+  align-items: center;
+  margin: 10% 0;
+  
 }
 
-ul.days{
-  border: 2px solid whitesmoke;
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-h3.days {
-  border-bottom:2px solid whitesmoke;
+
+
+/* @media only screen and (min-width: 325px){
+
+
+} */
+
+@media only screen and (min-width: 425px){
+
+  iframe {
+     height: 200px;
+  }
 }
 
+@media only screen and (min-width: 601px){
+
+  iframe {
+    height: 300px;
+ }
+  
+}
+
+@media only screen and (min-width: 725px){
+
+  iframe {
+    height: 400px;
+ }
+  
+}
+
+@media only screen and (min-width: 1024px){
+
+  iframe {
+    height: 450px;
+ }
+  
+}
