@@ -13,7 +13,6 @@ export default class RegistrationPage extends Component {
   static contextType = ApiContext;
   // if sucessful user is routed to login! handled in form.
   handleRegistrationSuccess = user => {
-    console.log("this ran");
     const { history } = this.props
     this.context.login();
     history.push(`/dashboard/${this.context.currentUser}`)

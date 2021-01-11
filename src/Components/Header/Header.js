@@ -14,8 +14,10 @@ class Header extends Component {
   };
   // displays header html for logging out
   renderLogoutLink() {
+    const exerciseAddress = `/dashboard/${this.context.currentUser}`;
     return (
       <div className="Header__logged-in">
+        <Link to={exerciseAddress}>My Exercises</Link>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>
@@ -32,11 +34,21 @@ class Header extends Component {
     );
   }
 
+  renderHeader = () => {
+    return(
+
+    <div className='home'>
+    <Link to="/" className='header-a'>
+      Mindful Muscle
+    </Link>
+    </div>)
+  };
+
   render() {
     // decideds which header is appropriate.
     return (
       <nav className="Header">
-        <h1>Mindful Muscle</h1>
+        {this.renderHeader()}
         {this.context.loggedIn
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

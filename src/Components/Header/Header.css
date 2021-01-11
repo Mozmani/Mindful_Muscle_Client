@@ -18,7 +18,7 @@ div.Header__logged-in, div.Header__not-logged-in{
   
 }
 
-a {
+div.Header__logged-in a, div.Header__not-logged-in a {
   color: whitesmoke;
   text-decoration: none;
   margin-right: 10px;
@@ -28,6 +28,25 @@ a {
   border-radius: 16px;
 }
 
-a:hover {
+div.Header__not-logged-in a:hover {
   background-color: #22223B;
+}
+
+div.Header__logged-in a:hover {
+  background-color: #22223B;
+}
+
+div.home {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+a.header-a{
+  color: whitesmoke;
+  text-decoration: none;
+
+}
+
+a.header-a:hover{
+  color:#22223B;
 }
