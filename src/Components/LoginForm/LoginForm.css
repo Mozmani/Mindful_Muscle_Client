@@ -3,12 +3,29 @@ section.LoginPage{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid whitesmoke;
+  border: 2px solid #588157;
+  background-color: #a3b18a;
   border-radius: 16px;
   margin: 10% 10%
 }
 
-
+input[type=text], input[type=password] {
+  border: 5px solid #588157; 
+  width: 70%;
+  border-radius: 16px;
+  -webkit-box-shadow: 
+    inset 0 0 8px  rgba(0,0,0,0.1),
+          0 0 16px rgba(0,0,0,0.1); 
+  -moz-box-shadow: 
+    inset 0 0 8px  rgba(0,0,0,0.1),
+          0 0 16px rgba(0,0,0,0.1); 
+  box-shadow: 
+    inset 0 0 8px  rgba(0,0,0,0.1),
+          0 0 16px rgba(0,0,0,0.1); 
+  padding: 5%;
+  background: rgba(255,255,255,0.5);
+  margin: 0 5%;
+}
 div.user_name, div.password{
   display:flex;
   flex-direction: column;
@@ -21,17 +38,18 @@ div.btn{
   margin: 8% 0%;
 }
 button {
-  color: whitesmoke;
-  background-color: #4A4E69;
+  color: #344e41;
+  border: #344e41 solid;
+  background-color: #a3b18a;
   text-decoration: none;
   margin-right: 10px;
   margin-bottom: 5px;
-  border: whitesmoke solid;
   padding: 8px;
   border-radius: 16px;
   font-size: 18px;
 }
 
 button:hover {
-  background-color: #22223B;
+  color: #dad7cd;
+  border-color: #dad7cd;
 }

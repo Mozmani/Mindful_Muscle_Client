@@ -55,7 +55,7 @@ class ReturnUserPage extends Component {
 
         arr.push(
           <ul key={i} className="days">
-            <h3 className="days">{`Day: ${i + 1}`}</h3>
+            <h3 className="days">{`Day ${i + 1}:`}</h3>
 
             {newList}
           </ul>
@@ -72,7 +72,7 @@ class ReturnUserPage extends Component {
         <li key={idx}>
           <h4>{exercise.exercise_name}</h4>
           <p>{exercise.exercise_description}</p>
-          <p>{exercise.instructions}</p>
+          
           <iframe
             width="100%"
             src={exercise.link}
@@ -81,6 +81,7 @@ class ReturnUserPage extends Component {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
+          <p>{exercise.instructions}</p>
         </li>
       );
     });
@@ -180,9 +181,10 @@ class ReturnUserPage extends Component {
   }
 
   render() {
+    
     return (
       <section className="returnUser">
-        <h2>{`Welcome Back ${this.context.currentUser}`}</h2>
+        <h2>{`Welcome Back, ${this.context.currentUser}`}</h2>
         <p>Below you can find your own custom workout plan!</p>
         <ul>
           <p>Here are some basic concepts to help you meet your goals!</p>
@@ -194,7 +196,10 @@ class ReturnUserPage extends Component {
           </li>
           <li>
             WARNING: Exercises performed without proper form can put you at
-            serious risk. MAKE SURE TO READ THE INSTRUCTIONS OR WATCH THE VIDEO FOR EACH
+            serious risk.
+            </li>
+            <li>
+            MAKE SURE TO READ THE INSTRUCTIONS OR WATCH THE VIDEO FOR EACH
             EXERCISE!
           </li>
         </ul>

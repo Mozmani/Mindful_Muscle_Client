@@ -16,7 +16,7 @@ class Header extends Component {
   renderLogoutLink() {
     const exerciseAddress = `/dashboard/${this.context.currentUser}`;
     return (
-      <div className="Header__logged-in">
+      <div className="Header__logged">
         <Link to={exerciseAddress}>Exercises</Link>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
@@ -27,7 +27,7 @@ class Header extends Component {
   //displays html for logging in and registering
   renderLoginLink() {
     return (
-      <div className="Header__not-logged-in">
+      <div className="Header__logged">
         <Link to="/login">Sign In</Link>
         <Link to="/register">Register</Link>
       </div>

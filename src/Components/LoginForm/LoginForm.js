@@ -55,7 +55,7 @@ class LoginForm extends Component {
       <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
         <div className="user_name">
           <label htmlFor="LoginForm__user_name">User name</label>
-          <input required name="user_name" id="LoginForm__user_name"></input>
+          <input required name="user_name" id="LoginForm__user_name" type='text'></input>
         </div>
         <div className="password">
           <label htmlFor="LoginForm__password">Password</label>

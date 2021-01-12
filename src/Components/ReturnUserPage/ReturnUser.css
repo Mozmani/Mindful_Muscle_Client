@@ -1,13 +1,15 @@
 
 
 
-section.returnUser {
+section.returnUser, ul p  {
   padding: 0;
   display: flex;
   flex-direction: column;
   list-style: none;
   align-items: center;
+  align-content: center;
   margin: 0 10%;
+  color:#344e41;
 }
 
 li {
@@ -17,15 +19,31 @@ li {
   align-items: center;
   margin: 10% 0;
   
+  
 }
 
+ul.days li {
+  border: 2px solid #588157;
+  padding: 0 5%;
+  border-radius: 20px;
+  background-color: #a3b18a;
+  color: #000000;
+  padding-bottom: 4%;
+}
+
+li p{
+  color: #000000;
+}
 
 ul {
   margin: 0;
   padding: 0;
 }
 
-
+iframe{
+  margin: 5% 0;
+  border-radius: 20px;
+}
 
 /* @media only screen and (min-width: 325px){
 

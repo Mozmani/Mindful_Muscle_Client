@@ -1,2 +1,9 @@
 
 
+div.homePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 10%;
+  color:#344e41;
+}
